@@ -21,10 +21,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         score += 2
     }
     
-    mutating func checkIsTheGameOver(cards: Card){
-        
-    }
-    
     mutating func choose(_ card: Card) {
         
         if let chosenIndex = cards.firstIndex(where: {$0.id == card.id }),

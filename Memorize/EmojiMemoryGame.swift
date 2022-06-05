@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-func makeCardContent(index: Int) -> String {
-    
-    return EmojiMemoryGame.vehicles[index]
-}
-
 class EmojiMemoryGame: ObservableObject {
     
     init() {
@@ -19,8 +14,6 @@ class EmojiMemoryGame: ObservableObject {
         theme.emojis.shuffle()
         model = EmojiMemoryGame.createRandomMemoryGame(theme: theme)
     }
-    
-    static let vehicles: [String] = ["🛳","🚃","🚲","🚗","⛵️","🚤","🚀","🛸","🚁","🛶","🛻","🏎","🚜","🚒","🚠","🚉","🚂","🛵","🚌","🏍","🚓","🚛","🚅","🚑"]
     
     static var themes: Array<Theme> = [
         Theme(name: "Vehicles",
